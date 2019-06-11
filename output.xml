@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190611 15:33:36.851" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
+<suite source="/home/johnson-chiang/Desktop/IPMITest/rf_ipmi/ipmi.robot" id="s1" name="Ipmi">
+<test id="s1-t1" name="Cases1-IPMI-SEL">
+<kw name="IPMI">
+<arguments>
+<arg>sel</arg>
+</arguments>
+<kw name="Run And Return Rc" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the return code.</doc>
+<arguments>
+<arg>${ipmi} ${host} ${interface} ${user} ${passwd} ${cmd}</arg>
+</arguments>
+<assign>
+<var>${run}</var>
+</assign>
+<msg timestamp="20190611 15:33:36.878" level="INFO">Running command 'ipmitool -H 192.168.89.132 -I lanplus -U aaa -P root sel 2&gt;&amp;1'.</msg>
+<msg timestamp="20190611 15:33:36.889" level="INFO">${run} = 1</msg>
+<status status="PASS" endtime="20190611 15:33:36.889" starttime="20190611 15:33:36.877"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>${ipmi} ${host} ${interface} ${user} ${passwd} ${cmd}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20190611 15:33:36.890" level="INFO">Running command 'ipmitool -H 192.168.89.132 -I lanplus -U aaa -P root sel 2&gt;&amp;1'.</msg>
+<msg timestamp="20190611 15:33:36.901" level="INFO">${result} = Error: Unable to establish IPMI v2 / RMCP+ session</msg>
+<status status="PASS" endtime="20190611 15:33:36.901" starttime="20190611 15:33:36.889"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should be equal as integers</arg>
+<arg>${run}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${run}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20190611 15:33:36.902" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20190611 15:33:36.902" level="FAIL">1 != 0</msg>
+<status status="FAIL" endtime="20190611 15:33:36.902" starttime="20190611 15:33:36.902"></status>
+</kw>
+<msg timestamp="20190611 15:33:36.903" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20190611 15:33:36.903" starttime="20190611 15:33:36.901"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Log</arg>
+<arg>${result}</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20190611 15:33:36.903" level="FAIL">AssertionError</msg>
+<status status="FAIL" endtime="20190611 15:33:36.903" starttime="20190611 15:33:36.903"></status>
+</kw>
+<status status="FAIL" endtime="20190611 15:33:36.903" starttime="20190611 15:33:36.903"></status>
+</kw>
+<status status="FAIL" endtime="20190611 15:33:36.904" starttime="20190611 15:33:36.877"></status>
+</kw>
+<status status="FAIL" endtime="20190611 15:33:36.904" critical="yes" starttime="20190611 15:33:36.876">AssertionError</status>
+</test>
+<test id="s1-t2" name="Cases2-IPMI-SDR">
+<kw name="IPMI">
+<arguments>
+<arg>sdr</arg>
+</arguments>
+<kw name="Run And Return Rc" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the return code.</doc>
+<arguments>
+<arg>${ipmi} ${host} ${interface} ${user} ${passwd} ${cmd}</arg>
+</arguments>
+<assign>
+<var>${run}</var>
+</assign>
+<msg timestamp="20190611 15:33:36.906" level="INFO">Running command 'ipmitool -H 192.168.89.132 -I lanplus -U aaa -P root sdr 2&gt;&amp;1'.</msg>
+<msg timestamp="20190611 15:33:36.917" level="INFO">${run} = 1</msg>
+<status status="PASS" endtime="20190611 15:33:36.917" starttime="20190611 15:33:36.905"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>${ipmi} ${host} ${interface} ${user} ${passwd} ${cmd}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20190611 15:33:36.919" level="INFO">Running command 'ipmitool -H 192.168.89.132 -I lanplus -U aaa -P root sdr 2&gt;&amp;1'.</msg>
+<msg timestamp="20190611 15:33:36.930" level="INFO">${result} = Error: Unable to establish IPMI v2 / RMCP+ session</msg>
+<status status="PASS" endtime="20190611 15:33:36.930" starttime="20190611 15:33:36.918"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should be equal as integers</arg>
+<arg>${run}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${run}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20190611 15:33:36.930" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20190611 15:33:36.931" level="FAIL">1 != 0</msg>
+<status status="FAIL" endtime="20190611 15:33:36.931" starttime="20190611 15:33:36.930"></status>
+</kw>
+<msg timestamp="20190611 15:33:36.931" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20190611 15:33:36.931" starttime="20190611 15:33:36.930"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Log</arg>
+<arg>${result}</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20190611 15:33:36.931" level="FAIL">AssertionError</msg>
+<status status="FAIL" endtime="20190611 15:33:36.932" starttime="20190611 15:33:36.931"></status>
+</kw>
+<status status="FAIL" endtime="20190611 15:33:36.932" starttime="20190611 15:33:36.931"></status>
+</kw>
+<status status="FAIL" endtime="20190611 15:33:36.932" starttime="20190611 15:33:36.905"></status>
+</kw>
+<status status="FAIL" endtime="20190611 15:33:36.932" critical="yes" starttime="20190611 15:33:36.904">AssertionError</status>
+</test>
+<test id="s1-t3" name="IPMILibrary">
+<kw name="Ipmicmd" library="IPMILibrary">
+<arguments>
+<arg>${ipmi}</arg>
+<arg>${host}</arg>
+<arg>${interface}</arg>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<arg>sel</arg>
+</arguments>
+<msg timestamp="20190611 15:33:36.944" level="INFO">Error: Unable to establish IPMI v2 / RMCP+ session</msg>
+<msg timestamp="20190611 15:33:36.944" level="FAIL">AssertionError</msg>
+<status status="FAIL" endtime="20190611 15:33:36.945" starttime="20190611 15:33:36.933"></status>
+</kw>
+<status status="FAIL" endtime="20190611 15:33:36.945" critical="yes" starttime="20190611 15:33:36.932">AssertionError</status>
+</test>
+<status status="FAIL" endtime="20190611 15:33:36.945" starttime="20190611 15:33:36.854"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="0">Critical Tests</stat>
+<stat fail="3" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="Ipmi" pass="0">Ipmi</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
