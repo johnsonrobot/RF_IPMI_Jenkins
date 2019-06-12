@@ -4,7 +4,7 @@ Library           IPMILibrary
 
 *** Variables ***
 ${ipmi}           ipmitool
-${host}           -H 192.168.89.132
+${host}           -H 192.168.89.137
 ${interface}      -I lanplus
 ${user}           -U root
 ${passwd}         -P root
@@ -20,6 +20,8 @@ Cases2-IPMI-SDR
 IPMILibrary
     ipmicmd    ${ipmi}  ${host}  ${interface}  ${user}  ${passwd}  sel
 
+IPMILibrary-ERROR
+    ipmicmd    ${ipmi}  ${host}  ${interface}  ${user}  ${passwd}  saa
 *** Keywords ***
 IPMI
     [Arguments]    ${cmd}
