@@ -20,8 +20,8 @@ Cases2-IPMI-SDR
 IPMILibrary
     ipmicmd    ${ipmi}  ${host}  ${interface}  ${user}  ${passwd}  sel
 
-IPMILibrary-ERROR
-    ipmicmd    ${ipmi}  ${host}  ${interface}  ${user}  ${passwd}  saa
+IPMILibrary-SDR
+    ipmicmd    ${ipmi}  ${host}  ${interface}  ${user}  ${passwd}  sdr
 *** Keywords ***
 IPMI
     [Arguments]    ${cmd}
