@@ -1,14 +1,7 @@
 *** Settings ***
 Library           OperatingSystem
 Library           IPMILibrary
-
-*** Variables ***
-${ipmi}           ipmitool
-${host}           -H 192.168.89.137
-${interface}      -I lanplus
-${user}           -U root
-${passwd}         -P root
-#${cmd}           sel
+Variables         config.py
 
 *** Test Cases ***
 Cases1-IPMI-SEL
@@ -18,10 +11,11 @@ Cases2-IPMI-SDR
     IPMI    sdr
 
 IPMILibrary
-    ipmicmd    ${ipmi}  ${host}  ${interface}  ${user}  ${passwd}  sel
+    ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sel
 
 IPMILibrary-SDR
-    ipmicmd    ${ipmi}  ${host}  ${interface}  ${user}  ${passwd}  sdr
+    ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
+
 *** Keywords ***
 IPMI
     [Arguments]    ${cmd}
