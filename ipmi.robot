@@ -52,6 +52,7 @@ IPMILibrary-SDR-15
 IPMILibrary-SDR-16
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
+
 *** Keywords ***
 IPMI
     [Arguments]    ${cmd}
