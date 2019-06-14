@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190613 16:58:06.323" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
+<robot rpa="false" generated="20190614 10:16:36.285" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
 <suite source="/home/johnson-chiang/Desktop/IPMITest/rf_ipmi/ipmi.robot" id="s1" name="Ipmi">
 <test id="s1-t1" name="Cases1-IPMI-SEL">
 <kw name="IPMI">
@@ -14,9 +14,9 @@
 <assign>
 <var>${run}</var>
 </assign>
-<msg timestamp="20190613 16:58:06.349" level="INFO">Running command 'ipmitool -H 192.168.89.140 -I lanplus -U root -P root sel 2&gt;&amp;1'.</msg>
-<msg timestamp="20190613 16:58:06.379" level="INFO">${run} = 0</msg>
-<status status="PASS" endtime="20190613 16:58:06.379" starttime="20190613 16:58:06.348"></status>
+<msg timestamp="20190614 10:16:36.331" level="INFO">Running command 'ipmitool -H 192.168.89.141 -I lanplus -U root -P root sel 2&gt;&amp;1'.</msg>
+<msg timestamp="20190614 10:16:36.385" level="INFO">${run} = 0</msg>
+<status status="PASS" endtime="20190614 10:16:36.385" starttime="20190614 10:16:36.330"></status>
 </kw>
 <kw name="Run" library="OperatingSystem">
 <doc>Runs the given command in the system and returns the output.</doc>
@@ -26,15 +26,15 @@
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20190613 16:58:06.381" level="INFO">Running command 'ipmitool -H 192.168.89.140 -I lanplus -U root -P root sel 2&gt;&amp;1'.</msg>
-<msg timestamp="20190613 16:58:06.413" level="INFO">${result} = SEL Information
+<msg timestamp="20190614 10:16:36.386" level="INFO">Running command 'ipmitool -H 192.168.89.141 -I lanplus -U root -P root sel 2&gt;&amp;1'.</msg>
+<msg timestamp="20190614 10:16:36.418" level="INFO">${result} = SEL Information
 Version          : 1.5 (v1.5, v2 compliant)
-Entries          : 346
-Free Space       : 56496 bytes 
-Percent Used     : 8%
-Last Add Time    : 01/05/1987 18:48:42
+Entries          : 366
+Free Space       : 56016 bytes 
+Percent Used     : 9%
+Last Add Time    : 01/05/1987 18:48:41
 Last Del Time    : 01/05...</msg>
-<status status="PASS" endtime="20190613 16:58:06.413" starttime="20190613 16:58:06.380"></status>
+<status status="PASS" endtime="20190614 10:16:36.418" starttime="20190614 10:16:36.385"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -52,13 +52,13 @@ Last Del Time    : 01/05...</msg>
 <arg>${run}</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20190613 16:58:06.414" level="INFO">Argument types are:
+<msg timestamp="20190614 10:16:36.419" level="INFO">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20190613 16:58:06.414" starttime="20190613 16:58:06.414"></status>
+<status status="PASS" endtime="20190614 10:16:36.419" starttime="20190614 10:16:36.419"></status>
 </kw>
-<msg timestamp="20190613 16:58:06.415" level="INFO">${status} = True</msg>
-<status status="PASS" endtime="20190613 16:58:06.415" starttime="20190613 16:58:06.413"></status>
+<msg timestamp="20190614 10:16:36.419" level="INFO">${status} = True</msg>
+<status status="PASS" endtime="20190614 10:16:36.419" starttime="20190614 10:16:36.418"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -74,27 +74,27 @@ Last Del Time    : 01/05...</msg>
 <arguments>
 <arg>${result}</arg>
 </arguments>
-<msg timestamp="20190613 16:58:06.415" level="INFO">SEL Information
+<msg timestamp="20190614 10:16:36.420" level="INFO">SEL Information
 Version          : 1.5 (v1.5, v2 compliant)
-Entries          : 346
-Free Space       : 56496 bytes 
-Percent Used     : 8%
-Last Add Time    : 01/05/1987 18:48:42
+Entries          : 366
+Free Space       : 56016 bytes 
+Percent Used     : 9%
+Last Add Time    : 01/05/1987 18:48:41
 Last Del Time    : 01/05/1987 20:24:13
 Overflow         : false
 Supported Cmds   : 'Partial Add' 'Reserve' 'Get Alloc Info' 
 # of Alloc Units : 2700
 Alloc Unit Size  : 24
-# Free Units     : 2354
-Largest Free Blk : 2354
+# Free Units     : 2334
+Largest Free Blk : 2334
 Max Record Size  : 1</msg>
-<status status="PASS" endtime="20190613 16:58:06.416" starttime="20190613 16:58:06.415"></status>
+<status status="PASS" endtime="20190614 10:16:36.420" starttime="20190614 10:16:36.420"></status>
 </kw>
-<status status="PASS" endtime="20190613 16:58:06.416" starttime="20190613 16:58:06.415"></status>
+<status status="PASS" endtime="20190614 10:16:36.420" starttime="20190614 10:16:36.420"></status>
 </kw>
-<status status="PASS" endtime="20190613 16:58:06.416" starttime="20190613 16:58:06.348"></status>
+<status status="PASS" endtime="20190614 10:16:36.420" starttime="20190614 10:16:36.330"></status>
 </kw>
-<status status="PASS" endtime="20190613 16:58:06.416" critical="yes" starttime="20190613 16:58:06.347"></status>
+<status status="PASS" endtime="20190614 10:16:36.421" critical="yes" starttime="20190614 10:16:36.329"></status>
 </test>
 <test id="s1-t2" name="Cases2-IPMI-SDR">
 <kw name="IPMI">
@@ -109,9 +109,9 @@ Max Record Size  : 1</msg>
 <assign>
 <var>${run}</var>
 </assign>
-<msg timestamp="20190613 16:58:06.418" level="INFO">Running command 'ipmitool -H 192.168.89.140 -I lanplus -U root -P root sdr 2&gt;&amp;1'.</msg>
-<msg timestamp="20190613 16:58:07.279" level="INFO">${run} = 0</msg>
-<status status="PASS" endtime="20190613 16:58:07.279" starttime="20190613 16:58:06.417"></status>
+<msg timestamp="20190614 10:16:36.423" level="INFO">Running command 'ipmitool -H 192.168.89.141 -I lanplus -U root -P root sdr 2&gt;&amp;1'.</msg>
+<msg timestamp="20190614 10:16:37.117" level="INFO">${run} = 0</msg>
+<status status="PASS" endtime="20190614 10:16:37.117" starttime="20190614 10:16:36.422"></status>
 </kw>
 <kw name="Run" library="OperatingSystem">
 <doc>Runs the given command in the system and returns the output.</doc>
@@ -121,13 +121,13 @@ Max Record Size  : 1</msg>
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20190613 16:58:07.286" level="INFO">Running command 'ipmitool -H 192.168.89.140 -I lanplus -U root -P root sdr 2&gt;&amp;1'.</msg>
-<msg timestamp="20190613 16:58:08.114" level="INFO">${result} = CPU Temperature  | disabled          | ns
+<msg timestamp="20190614 10:16:37.121" level="INFO">Running command 'ipmitool -H 192.168.89.141 -I lanplus -U root -P root sdr 2&gt;&amp;1'.</msg>
+<msg timestamp="20190614 10:16:37.973" level="INFO">${result} = CPU Temperature  | disabled          | ns
 IPMI Watchdog    | 0x00              | ok
 Physical Scrty   | 0x00              | ok
 System Event Log | 0x00              | ok
 System Event     | 0x00         ...</msg>
-<status status="PASS" endtime="20190613 16:58:08.115" starttime="20190613 16:58:07.281"></status>
+<status status="PASS" endtime="20190614 10:16:37.974" starttime="20190614 10:16:37.118"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -145,13 +145,13 @@ System Event     | 0x00         ...</msg>
 <arg>${run}</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20190613 16:58:08.119" level="INFO">Argument types are:
+<msg timestamp="20190614 10:16:37.976" level="INFO">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20190613 16:58:08.120" starttime="20190613 16:58:08.118"></status>
+<status status="PASS" endtime="20190614 10:16:37.976" starttime="20190614 10:16:37.975"></status>
 </kw>
-<msg timestamp="20190613 16:58:08.120" level="INFO">${status} = True</msg>
-<status status="PASS" endtime="20190613 16:58:08.120" starttime="20190613 16:58:08.116"></status>
+<msg timestamp="20190614 10:16:37.976" level="INFO">${status} = True</msg>
+<status status="PASS" endtime="20190614 10:16:37.977" starttime="20190614 10:16:37.974"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -167,7 +167,7 @@ System Event     | 0x00         ...</msg>
 <arguments>
 <arg>${result}</arg>
 </arguments>
-<msg timestamp="20190613 16:58:08.123" level="INFO">CPU Temperature  | disabled          | ns
+<msg timestamp="20190614 10:16:37.978" level="INFO">CPU Temperature  | disabled          | ns
 IPMI Watchdog    | 0x00              | ok
 Physical Scrty   | 0x00              | ok
 System Event Log | 0x00              | ok
@@ -180,17 +180,17 @@ PSU Input Power  | no reading        | ns
 PSU Curr Out %   | no reading        | ns
 P12V             | disabled          | ns
 P5V              | 3.26 Volts        | nr
-DDR VDDQ         | 0.96 Volts        | nr
+DDR VDDQ         | 0.97 Volts        | nr
 Voltage Fault    | 0x00              | ok
 BMC FW Health    | 0x00              | ok
 BMC ECC Err      | Not Readable      | ns</msg>
-<status status="PASS" endtime="20190613 16:58:08.124" starttime="20190613 16:58:08.123"></status>
+<status status="PASS" endtime="20190614 10:16:37.978" starttime="20190614 10:16:37.978"></status>
 </kw>
-<status status="PASS" endtime="20190613 16:58:08.124" starttime="20190613 16:58:08.121"></status>
+<status status="PASS" endtime="20190614 10:16:37.978" starttime="20190614 10:16:37.977"></status>
 </kw>
-<status status="PASS" endtime="20190613 16:58:08.125" starttime="20190613 16:58:06.417"></status>
+<status status="PASS" endtime="20190614 10:16:37.979" starttime="20190614 10:16:36.421"></status>
 </kw>
-<status status="PASS" endtime="20190613 16:58:08.125" critical="yes" starttime="20190613 16:58:06.416"></status>
+<status status="PASS" endtime="20190614 10:16:37.979" critical="yes" starttime="20190614 10:16:36.421"></status>
 </test>
 <test id="s1-t3" name="IPMILibrary">
 <kw name="Ipmicmd" library="IPMILibrary">
@@ -202,23 +202,23 @@ BMC ECC Err      | Not Readable      | ns</msg>
 <arg>${passwd}</arg>
 <arg>sel</arg>
 </arguments>
-<msg timestamp="20190613 16:58:08.173" level="INFO">SEL Information
+<msg timestamp="20190614 10:16:38.018" level="INFO">SEL Information
 Version          : 1.5 (v1.5, v2 compliant)
-Entries          : 346
-Free Space       : 56496 bytes 
-Percent Used     : 8%
-Last Add Time    : 01/05/1987 18:48:42
+Entries          : 366
+Free Space       : 56016 bytes 
+Percent Used     : 9%
+Last Add Time    : 01/05/1987 18:48:41
 Last Del Time    : 01/05/1987 20:24:13
 Overflow         : false
 Supported Cmds   : 'Partial Add' 'Reserve' 'Get Alloc Info' 
 # of Alloc Units : 2700
 Alloc Unit Size  : 24
-# Free Units     : 2354
-Largest Free Blk : 2354
+# Free Units     : 2334
+Largest Free Blk : 2334
 Max Record Size  : 1</msg>
-<status status="PASS" endtime="20190613 16:58:08.174" starttime="20190613 16:58:08.128"></status>
+<status status="PASS" endtime="20190614 10:16:38.019" starttime="20190614 10:16:37.980"></status>
 </kw>
-<status status="PASS" endtime="20190613 16:58:08.175" critical="yes" starttime="20190613 16:58:08.127"></status>
+<status status="PASS" endtime="20190614 10:16:38.020" critical="yes" starttime="20190614 10:16:37.980"></status>
 </test>
 <test id="s1-t4" name="IPMILibrary-SDR">
 <kw name="Ipmicmd" library="IPMILibrary">
@@ -230,7 +230,7 @@ Max Record Size  : 1</msg>
 <arg>${passwd}</arg>
 <arg>sdr</arg>
 </arguments>
-<msg timestamp="20190613 16:58:08.907" level="INFO">CPU Temperature  | disabled          | ns
+<msg timestamp="20190614 10:16:38.802" level="INFO">CPU Temperature  | disabled          | ns
 IPMI Watchdog    | 0x00              | ok
 Physical Scrty   | 0x00              | ok
 System Event Log | 0x00              | ok
@@ -247,11 +247,11 @@ DDR VDDQ         | 0.97 Volts        | nr
 Voltage Fault    | 0x00              | ok
 BMC FW Health    | 0x00              | ok
 BMC ECC Err      | Not Readable      | ns</msg>
-<status status="PASS" endtime="20190613 16:58:08.908" starttime="20190613 16:58:08.177"></status>
+<status status="PASS" endtime="20190614 10:16:38.802" starttime="20190614 10:16:38.021"></status>
 </kw>
-<status status="PASS" endtime="20190613 16:58:08.910" critical="yes" starttime="20190613 16:58:08.176"></status>
+<status status="PASS" endtime="20190614 10:16:38.802" critical="yes" starttime="20190614 10:16:38.020"></status>
 </test>
-<status status="PASS" endtime="20190613 16:58:08.913" starttime="20190613 16:58:06.325"></status>
+<status status="PASS" endtime="20190614 10:16:38.803" starttime="20190614 10:16:36.287"></status>
 </suite>
 <statistics>
 <total>
