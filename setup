@@ -1,0 +1,4 @@
+#!/bin/sh
+python -m robot -t Cases1* -t IPMILibrary-SDR-13 ipmi.robot
+exit 0
+ 
