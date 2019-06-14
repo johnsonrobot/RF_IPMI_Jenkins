@@ -1,3 +1,3 @@
 #!/bin/sh
-robot ipmi.robot
+/home/johnson-chiang/.local/bin/robot ipmi.robot
 exit 0
