@@ -5,12 +5,14 @@ Variables         config.py
 
 *** Test Cases ***
 Cases1-IPMI-SEL
+    [Tags]  Execute
     IPMI    sel
 
 Cases2-IPMI-SDR
     IPMI    sdr
 
 IPMILibrary-3
+    [Tags]  Execute
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sel
 
 IPMILibrary-SDR-4
@@ -20,9 +22,11 @@ IPMILibrary-SDR-5
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 IPMILibrary-SDR-6
+    [Tags]  Execute
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 IPMILibrary-SDR-7
+    [Tags]  Execute
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 IPMILibrary-SDR-8
@@ -41,6 +45,7 @@ IPMILibrary-SDR-12
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 IPMILibrary-SDR-13
+    [Tags]  Execute
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 IPMILibrary-SDR-14
@@ -50,6 +55,7 @@ IPMILibrary-SDR-15
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 IPMILibrary-SDR-16
+    [Tags]  Execute
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 
