@@ -1,5 +1,5 @@
 ipmi =      "ipmitool"
-host =      "-H 192.168.89.141"
+host =      "-H 192.168.89.132"
 interface = "-I lanplus"
 user =      "-U root"
 passwd =    "-P root"

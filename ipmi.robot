@@ -2,17 +2,20 @@
 Library           IPMILibrary
 Library           OperatingSystem
 Variables         config.py
+Force Tags        ipmi
+Default Tags      CCC
+
 
 *** Test Cases ***
 Cases1-IPMI-SEL
-    [Tags]  Execute
+    [Tags]  AAA     BBB
     IPMI    sel
 
 Cases2-IPMI-SDR
     IPMI    sdr
 
 IPMILibrary-3
-    [Tags]  Execute
+    [Tags]  Execute     BBB
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sel
 
 IPMILibrary-SDR-4
@@ -22,7 +25,7 @@ IPMILibrary-SDR-5
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 IPMILibrary-SDR-6
-    [Tags]  Execute
+    [Tags]  Execute     BBB
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 IPMILibrary-SDR-7
@@ -56,6 +59,7 @@ IPMILibrary-SDR-15
 
 IPMILibrary-SDR-16
     [Tags]  Execute
+    [Timeout]
     ipmicmd    ${ipmi}    ${host}    ${interface}    ${user}    ${passwd}    sdr
 
 

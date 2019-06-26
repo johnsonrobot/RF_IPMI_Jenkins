@@ -1,0 +1,5 @@
+#file name  .gitignore
+#ignore .pyc, .xml and .html files
+*.pyc
+*.xml
+*.html
